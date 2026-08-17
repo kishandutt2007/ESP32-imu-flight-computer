@@ -41,11 +41,11 @@ graph.addLegend()
 graph.showGrid(x = True, y = True)
 
 #plotting the individual lines and assigning the data arrays
-ax_line = graph.plot(name = "Ax")
+ax_line = graph.plot(pen = "r", name = "Ax")
 ax_data = []
-ay_line = graph.plot(name = "Ay")
+ay_line = graph.plot(pen = "g", name = "Ay")
 ay_data = []
-az_line = graph.plot(name = "Az")
+az_line = graph.plot(pen = "b", name = "Az")
 az_data = []
 
 #function to save the filtered data from the bluetooth serial into the csv file
