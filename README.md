@@ -4,6 +4,12 @@ An ESP32-based IMU data acquisition and telemetry system designed to explore emb
 
 The system acquires 3-axis acceleration measurements from an MPU-9250, records timestamped raw and filtered sensor data to a microSD card, applies real-time EWMA filtering and outlier rejection, and transmits filtered telemetry over Bluetooth to a Python ground station for live visualization.
 
+## Hardware Prototype
+
+The prototype integrates an ESP32, MPU-9250 IMU, and microSD module on a breadboard. The ESP32 handles sensor acquisition, filtering, data logging, and Bluetooth telemetry.
+
+![ESP32 IMU Flight Computer Hardware](docs/hardwaresetup.jpg)
+
 ## Features
 
 - MPU-9250 3-axis acceleration acquisition over I2C
@@ -101,6 +107,12 @@ The Python ground station:
 - records received telemetry to CSV
 - plots acceleration live using PyQtGraph
 
+## Ground Station Visualization
+
+Filtered X, Y, and Z acceleration data is transmitted over Bluetooth and plotted in real time using the Python ground station.
+
+![Live IMU Ground Station](docs/groundstationplot.png)
+
 ## Hardware
 
 - ESP32 development board
@@ -134,6 +146,20 @@ src/              ESP32 firmware
 groundstation/    Python ground-station software
 platformio.ini    PlatformIO configuration
 ```
+
+## Results
+
+The completed system successfully:
+
+- Acquired 3-axis accelerometer data from the MPU-9250
+- Logged timestamped raw and filtered measurements to microSD
+- Applied EWMA filtering and outlier rejection in real time
+- Transmitted filtered telemetry over Bluetooth
+- Validated incoming telemetry packets on the ground station
+- Visualized all three acceleration axes in real time
+- Recorded received telemetry to a separate CSV file
+
+A representative test dataset is available in [`docs/imudata.csv`](docs/imudata.csv).
 
 ## Future Improvements
 
