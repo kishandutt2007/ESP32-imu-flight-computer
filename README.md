@@ -8,7 +8,7 @@ The system acquires 3-axis acceleration measurements from an MPU-9250, records t
 
 The prototype integrates an ESP32, MPU-9250 IMU, and microSD module on a breadboard. The ESP32 handles sensor acquisition, filtering, data logging, and Bluetooth telemetry.
 
-![ESP32 IMU Flight Computer Hardware](docs/hardwaresetup.jpg)
+![ESP32 IMU Flight Computer Hardware](docs/hardwaresetup.png)
 
 ## Features
 
